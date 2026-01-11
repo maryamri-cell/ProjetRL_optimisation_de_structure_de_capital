@@ -1,46 +1,43 @@
-# Résumé du Projet - Optimisation de Structure de Capital via Deep RL
+# Résumé du Projet
 
-##  Fichiers et Répertoires Créés
+![Optimizing](images/optimizing.jpeg)
 
-### 1. **Racine du Projet** (7 fichiers)
+## Qu'est-ce que c'est ?
+
+Optimisation de la structure de capital (dettes vs capitaux propres) utilisant des algorithmes d'apprentissage par renforcement (RL).
+
+## Algorithmes Disponibles
+
+- **PPO** (Proximal Policy Optimization)
+- **SAC** (Soft Actor-Critic)
+- **TD3** (Twin Delayed DDPG)
+
+## Résultats de Convergence
+
+![Convergence PPO Seeds](images/convergence_ppo_seeds0_1.png)
+
+![SAC Convergence AAPL](images/sac_convergence_AAPL_seed42_regen.png)
+
+![TD3 Convergence AAPL](images/td3_convergence_aapl_seed42_regen.png)
+
+## Structure du Projet
 
 ```
 ProjetRL/
- config.yaml                    # Configuration YAML complète (94 lignes)
- requirements.txt               # Dépendances Python (40 packages)
- README.md                      # Documentation complète (450+ lignes)
- INSTALLATION.md                # Guide installation détaillé (280+ lignes)
- Makefile                       # Commandes utilitaires
- .gitignore                     # Exclusions Git
- .env.example                   # Variables d'environnement (template)
+ streamlit_app.py              Interface utilisateur
+ config.yaml                   Configuration
+ requirements.txt              Dépendances Python
+ README.md                     Documentation
+ 
+ src/                          Code source
+  - environment/               Environnement RL
+  - models/                    Modèles financiers
+  - utils/                     Utilitaires
+  
+ models/                       Modèles pré-entraînés
+ configs/                      Hyperparamètres
+ data/                         Données
 ```
-
-### 2. **Code Source** `src/` (3 modules + 11 fichiers)
-
-#### `src/utils/` - Utilitaires
-- `__init__.py` - Export des fonctions
-- `config.py` (60 lignes) - Configuration et logging
-- `finance.py` (320 lignes) - Fonctions financières
-  - WACC, Interest Coverage, Credit Spread
-  - Distress Costs, Transaction Costs
-  - Enterprise Value (DCF)
-
-#### `src/models/` - Modèles Économiques
-- `__init__.py`
-- `company.py` (400 lignes) - Modèle d'entreprise complet
-  - Simulation cash flows, dette, equity
-  - Calcul de métriques (leverage, rating, coverage)
-  - Gestion des défauts
-
-#### `src/environment/` - Environnement RL
-- `__init__.py`
-- `capital_structure_env.py` (600 lignes) - Env Gymnasium
-  - Espace d'état et d'action
-  - Fonction de récompense multi-objectif
-  - Contraintes réalistes
-  - 5 scénarios économiques
-
-#### `src/agents/` - Agents RL et Benchmarks
 - `__init__.py`
 - `rl_agents.py` (350 lignes) - 3 Algorithmes RL
   - PPO (Proximal Policy Optimization)

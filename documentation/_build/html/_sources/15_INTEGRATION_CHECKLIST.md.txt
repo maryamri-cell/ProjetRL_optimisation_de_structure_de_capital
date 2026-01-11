@@ -1,4 +1,6 @@
-# CHECKLIST D'INTÉGRATION - Améliorations Techniques
+# Checklist d'Intégration (Archivé)
+
+Cette section a été archivée. Pour les informations actuelles, consultez le README.md ou le guide d'installation.
 
 ##  Phase 1: Installation et Vérification
 

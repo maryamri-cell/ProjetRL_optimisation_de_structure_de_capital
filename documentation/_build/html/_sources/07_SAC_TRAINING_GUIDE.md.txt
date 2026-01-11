@@ -1,5 +1,7 @@
 #  SAC Training & Testing Guide
 
+![SAC Convergence AAPL](images/sac_convergence_AAPL_seed42_regen.png)
+
 ## Overview
 
 This guide provides complete instructions for training and testing the **Soft Actor-Critic (SAC)** algorithm on your real company financial data.
@@ -358,6 +360,8 @@ python optimizer_app.py
 **Recommendation:** Use **SAC** for exploration/research; use **PPO** for production.
 
 ### SAC vs TD3
+
+![TD3 Convergence AAPL](images/td3_convergence_aapl_seed42_regen.png)
 
 | Aspect | SAC | TD3 |
 |--------|-----|-----|

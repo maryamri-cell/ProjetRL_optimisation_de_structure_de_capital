@@ -31,6 +31,11 @@ else:
     html_logo = None
 html_title = "Capital Structure RL Optimizer"
 
+# Add custom CSS
+html_css_files = [
+    'css/custom.css',
+]
+
 # MyST parser config
 myst_enable_extensions = ["dollarmath", "amsmath"]
 source_suffix = {
