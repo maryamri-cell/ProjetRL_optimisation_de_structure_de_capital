@@ -1,4 +1,6 @@
-#  Index Complet du Projet
+# Index du Projet (Archivé)
+
+Cette section a été archivée. Pour les informations actuelles, consultez le README.md ou le guide d'installation.
 
 ## Fichiers Créés et Descriptions
 

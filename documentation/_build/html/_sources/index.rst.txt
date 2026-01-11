@@ -8,9 +8,8 @@ Bienvenue! Cette documentation présente le système complet d'optimisation de s
    :maxdepth: 2
    :caption: Guide Principal
 
-   01_QUICK_START
-   02_INSTALLATION
    03_PROJECT_SUMMARY
+   02_INSTALLATION
 
 .. toctree::
    :maxdepth: 2
@@ -36,7 +35,6 @@ Bienvenue! Cette documentation présente le système complet d'optimisation de s
 
    12_REWARD_NORMALIZATION_ANALYSIS
    13_TEST_PLATEAU_ANALYSIS
-   14_IMPROVEMENTS_SUMMARY
 
 .. toctree::
    :maxdepth: 2
@@ -44,46 +42,17 @@ Bienvenue! Cette documentation présente le système complet d'optimisation de s
 
    15_INTEGRATION_CHECKLIST
    16_VISUAL_TESTING_GUIDE
-   17_WHATS_NEW
-   18_PROJECT_INDEX
-   19_INTERACTIVE_SUMMARY
 
-Contenu Rapide
-==============
+Points Clés
+===========
 
-Démarrage rapide
-   - Quick Start : 5 minutes pour lancer votre premier entraînement
-   - Installation : Configuration complète de l'environnement
-
-Algorithmes Disponibles
-   - PPO (Proximal Policy Optimization)
-   - SAC (Soft Actor-Critic) - Recommandé
-   - TD3 (Twin Delayed DDPG)
-
-Données
-   - 20 entreprises du S&P 500 réelles
-   - 220 scénarios augmentés (20 variantes par entreprise)
-   - Récompense moyenne SAC: 0.867 ± 0.0018
-
-Statistiques Clés
-=================
-
-- Modèles Entraînés: PPO, SAC, TD3
-- Entreprises: 20 (AAPL, MSFT, GOOGL, etc.)
-- Timesteps: jusqu'à 50k par modèle
-- Convergence: Atteinte en ~10k steps
-- Interface Web: Flask + HTML responsif
-
-Ressources
-==========
-
-- Fichiers MD: 19 guides documentés
-- Images: 22 visualisations (convergence, évaluation, comparaison)
-- Données: CSV, JSON, modèles .zip
-- Code: Scripts Python complets & réutilisables
+- Modèles : **PPO**, **SAC**, **TD3**
+- Données réelles et augmentées
+- Interface interactive Streamlit
+- Export CSV des résultats
 
 Navigation
 ==========
 
-Utilisez le menu latéral pour naviguer ou consultez la section Project Summary pour une vue d'ensemble complète.
+Utilisez le menu latéral pour naviguer ou consultez la section "Démarrage Rapide" pour commencer.
 

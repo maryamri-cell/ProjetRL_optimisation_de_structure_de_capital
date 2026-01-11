@@ -487,6 +487,9 @@ for ticker in get_company_list():
 
 ```
 PPO (Proximal Policy Optimization)
+---
+
+![Convergence PPO Seeds](images/convergence_ppo_seeds0_1.png)
  Policy Network (3 layers)
     256 neurons
     ReLU activation

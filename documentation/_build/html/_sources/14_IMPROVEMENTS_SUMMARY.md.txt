@@ -1,4 +1,6 @@
-#  Améliorations Techniques Essentielles - Résumé
+# Amélioration (Archivé)
+
+Cette section a été archivée. Pour les informations actuelles, consultez le README.md ou le guide d'installation.
 
 ##  Fichiers Ajoutés
 
