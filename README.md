@@ -102,3 +102,4 @@ Annexes
   - `src/environment/capital_structure_env.py` — logique d'environnement
   - `src/models/company.py` — modèle financier de l'entreprise
   - `configs/` — hyperparamètres
+
