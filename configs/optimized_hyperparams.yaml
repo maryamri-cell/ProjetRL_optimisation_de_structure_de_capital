@@ -1,0 +1,143 @@
+# Hyperparamètres optimisés pour l'entraînement stable
+# Basé sur les meilleures pratiques pour RL continu
+
+PPO:
+  # Taux d'apprentissage AUGMENTÉ: peu de données → besoin signal fort
+  learning_rate: 1.0e-3
+  
+  # DRASTIQUEMENT réduit: données limitées (5 trimestres × 20 = 100 trimestres)
+  # Avec 4 envs: 128 / 4 = 32 steps par env avant update
+  n_steps: 128
+  
+  # Égal à n_steps pour utiliser toutes les données collectées
+  batch_size: 128
+  
+  # AUGMENTÉ: extraire plus de signal des données limitées
+  n_epochs: 30
+  
+  # RÉDUIT: épisodes courts (5 trimestres) → horizon plus court
+  gamma: 0.90
+  
+  # RÉDUIT aussi: GAE lambda adapté aux épisodes courts
+  gae_lambda: 0.90
+  
+  # AUGMENTÉ: plus de flexibilité lors des updates
+  clip_range: 0.3
+  
+  # BEAUCOUP AUGMENTÉ: favoriser exploration extensive
+  ent_coef: 0.05
+  
+  # Coefficient de la fonction de valeur
+  vf_coef: 0.5
+  
+  # AUGMENTÉ: tolérer plus de variance (données limitées)
+  max_grad_norm: 1.0
+  
+  # Utiliser policy network comme baseline
+  use_sde: false
+
+SAC:
+  # === CHANGEMENTS CRITIQUES POUR STABILITÉ ===
+  
+  # 1. Réduire learning rate pour stabilité (3e-4 → 1e-4)
+  learning_rate: 1.0e-4
+  
+  # 2. Réduire buffer size pour expériences plus récentes (1M → 100k)
+  # Évite les vieilles expériences qui peuvent déstabiliser
+  buffer_size: 100_000
+  
+  # 3. Commencer apprentissage plus tôt (10k → 1k)
+  # Permet une convergence plus rapide sur données limitées
+  learning_starts: 1_000
+  
+  # 4. Réduire batch size pour plus d'updates (256 → 64)
+  # Plus d'updates = meilleure utilisation des données
+  batch_size: 64
+  
+  # 5. Augmenter tau pour updates plus rapides des réseaux cibles (0.005 → 0.02)
+  # Réduit le lag entre critic et target networks
+  tau: 0.02
+  
+  # 6. Augmenter fréquence d'entraînement (1 → 4 steps)
+  train_freq: 4
+  
+  # 7. Augmenter gradient steps par action (1 → 4)
+  gradient_steps: 4
+  
+  # 8. Fixer entropy coefficient au lieu d'auto-tuning
+  # Auto peut être instable avec buffer limit
+  ent_coef: 0.2
+  
+  # 9. Target entropy pour 3 dimensions d'action
+  target_entropy: -3
+  
+  # Discount factor (inchangé)
+  gamma: 0.99
+
+TD3:
+  # Taux d'apprentissage
+  learning_rate: 3.0e-4
+  
+  # Taille du replay buffer
+  buffer_size: 1_000_000
+  
+  # Nombre de steps avant apprentissage
+  learning_starts: 10_000
+  
+  # Taille du batch
+  batch_size: 256
+  
+  # Soft update parameter
+  tau: 0.005
+  
+  # Discount factor
+  gamma: 0.99
+  
+  # Fréquence d'entraînement
+  train_freq: 1
+  
+  # Gradient steps
+  gradient_steps: 1
+  
+  # TD3: Délai entre updates de politique et critique
+  policy_delay: 2
+  
+  # Bruit pour le smoothing des actions cibles
+  target_policy_noise: 0.2
+  
+  # Range du clipping du bruit
+  target_noise_clip: 0.5
+
+# Configuration commune pour tous les algorithmes
+TRAINING:
+  # Nombre total de timesteps
+  total_timesteps: 2_000_000
+  
+  # Fréquence d'évaluation (en steps)
+  eval_freq: 10_000
+  
+  # Nombre d'épisodes pour évaluation
+  n_eval_episodes: 20
+  
+  # Nombre d'environnements parallèles
+  n_envs: 4
+  
+  # Flag pour entraînement déterministe pendant évaluation
+  deterministic_eval: true
+  
+  # Seed pour reproductibilité
+  seed: 42
+
+# Callbacks et monitoring
+CALLBACKS:
+  # Checkpoints
+  checkpoint_freq: 50_000
+  
+  # TensorBoard logging
+  log_tensorboard: true
+  
+  # Wandb logging
+  log_wandb: false
+  
+  # Verbose output
+  verbose: 1

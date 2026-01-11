@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Structure Optimizer - AI Platform</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --primary-light: #818cf8;
+            --secondary: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --light-gray: #f1f5f9;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            padding: 24px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: var(--white);
+            padding: 32px 40px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .header-left h1 {
+            color: var(--dark);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .header-left p {
+            color: var(--gray);
+            font-size: 15px;
+            font-weight: 400;
+        }
+        
+        .model-status-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .model-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .model-badge {
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+        
+        .model-badge.loaded {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .model-badge.not-loaded {
+            background: linear-gradient(135deg, var(--danger), #dc2626);
+            color: white;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+        
+        /* Main Grid Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .panel {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .panel-header h2 {
+            color: var(--dark);
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .panel-icon {
+            font-size: 24px;
+        }
+        
+        /* Form Styles */
+        .form-section {
+            margin-bottom: 24px;
+        }
+        
+        .form-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: var(--white);
+            color: var(--dark);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+        
+        .form-group input:hover,
+        .form-group select:hover {
+            border-color: var(--primary-light);
+        }
+        
+        .input-icon {
+            position: relative;
+        }
+        
+        .input-icon input {
+            padding-left: 40px;
+        }
+        
+        .input-icon::before {
+            content: attr(data-icon);
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        .cf-input-group {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        
+        .cf-input-group input {
+            padding: 10px 12px;
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        .cf-label {
+            font-size: 11px;
+            color: var(--gray);
+            text-align: center;
+            margin-top: 4px;
+        }
+        
+        /* Buttons */
+        .button-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            letter-spacing: 0.3px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+        
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+        }
+        
+        .btn-primary:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background: var(--light-gray);
+            color: var(--dark);
+            border: 2px solid #e2e8f0;
+        }
+        
+        .btn-secondary:hover {
+            background: #e2e8f0;
+            border-color: var(--gray);
+        }
+        
+        .btn-compare {
+            background: linear-gradient(135deg, var(--warning), #d97706);
+            color: white;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn-compare:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        /* Example Companies */
+        .examples-container {
+            margin-bottom: 20px;
+        }
+        
+        .example-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        
+        .btn-example {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        
+        .btn-example:hover {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+        
+        /* Results Panel */
+        .results-panel {
+            display: none;
+        }
+        
+        .results-panel.active {
+            display: block;
+        }
+        
+        .model-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
+        }
+        
+        .summary-card h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .summary-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .summary-label {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .summary-value {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        /* Metrics */
+        .metrics-section {
+            margin-top: 24px;
+        }
+        
+        .section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .metric-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .metric-label {
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .metric-value {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .metric-value.positive {
+            color: var(--success);
+        }
+        
+        .metric-value.negative {
+            color: var(--danger);
+        }
+        
+        /* Comparison Panel */
+        .comparison-panel {
+            grid-column: 1 / -1;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .model-result-card {
+            background: linear-gradient(135deg, #f8fafc, var(--white));
+            padding: 28px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .model-result-card.winner {
+            border-color: var(--success);
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+            transform: scale(1.02);
+        }
+        
+        .model-result-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .model-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .winner-badge {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Loading State */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .loading-overlay.active {
+            display: flex;
+        }
+        
+        .loading-content {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .spinner {
+            border: 4px solid var(--light-gray);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: var(--dark);
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* Alerts */
+        .alert {
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .alert.active {
+            display: flex;
+        }
+        
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+        
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        
+        .alert-icon {
+            font-size: 18px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+            
+            .header {
+                padding: 24px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .panel {
+                padding: 20px;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cf-input-group {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .button-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>
+                        <span style="font-size: 36px;">📊</span>
+                        Capital Structure Optimizer
+                    </h1>
+                    <p>AI-Powered Financial Optimization Platform • PPO, SAC & TD3 Models</p>
+                </div>
+                <div class="model-status-container">
+                    <div class="model-badges" id="modelStatus"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Input Panel -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2><span class="panel-icon">⚙️</span> Configuration</h2>
+                </div>
+                
+                <div class="alert alert-error" id="errorMessage">
+                    <span class="alert-icon">⚠️</span>
+                    <span id="errorText"></span>
+                </div>
+                
+                <div class="alert alert-success" id="successMessage">
+                    <span class="alert-icon">✅</span>
+                    <span id="successText"></span>
+                </div>
+                
+                <div class="form-section">
+                    <div class="form-section-title">🏢 Company Information</div>
+                    
+                    <div class="form-group">
+                        <label>Company Name / Ticker</label>
+                        <input type="text" id="ticker" value="MY_COMPANY" placeholder="e.g., AAPL, MSFT">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>AI Model Selection</label>
+                        <select id="modelType">
+                                <option value="ppo">PPO - Proximal Policy Optimization</option>
+                                <option value="sac">SAC - Soft Actor-Critic</option>
+                                <option value="td3">TD3 - Twin Delayed DDPG</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" id="useRealtime"> Utiliser les données en temps réel (Realtime)</label>
+                        <div style="font-size:12px;color:var(--gray);margin-top:6px;">Cochez pour récupérer automatiquement les entrées de l'entreprise depuis l'API configurée et exécuter l'optimiseur.</div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <div class="form-section-title">💰 Financial Data</div>
+                    
+                    <div class="form-group">
+                        <label>Total Debt ($M)</label>
+                        <input type="number" id="debt" value="100" min="0" step="10">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Total Equity ($M)</label>
+                        <input type="number" id="equity" value="200" min="0" step="10">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Cash Reserves ($M)</label>
+                        <input type="number" id="cash" value="50" min="0" step="10">
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <div class="form-section-title">📈 Cash Flow History</div>
+                    
+                    <div class="form-group">
+                        <label>Last 5 Quarters ($M)</label>
+                        <div class="cf-input-group">
+                            <div>
+                                <input type="number" id="cf0" value="0.10" step="0.01">
+                                <div class="cf-label">Q-4</div>
+                            </div>
+                            <div>
+                                <input type="number" id="cf1" value="0.10" step="0.01">
+                                <div class="cf-label">Q-3</div>
+                            </div>
+                            <div>
+                                <input type="number" id="cf2" value="0.10" step="0.01">
+                                <div class="cf-label">Q-2</div>
+                            </div>
+                            <div>
+                                <input type="number" id="cf3" value="0.10" step="0.01">
+                                <div class="cf-label">Q-1</div>
+                            </div>
+                            <div>
+                                <input type="number" id="cf4" value="0.10" step="0.01">
+                                <div class="cf-label">Q0</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Optimization Horizon (Quarters)</label>
+                        <input type="number" id="steps" value="5" min="1" max="20">
+                    </div>
+                </div>
+                
+                <div class="examples-container">
+                    <div class="form-section-title">🎯 Quick Examples</div>
+                    <div class="example-buttons" id="exampleButtons"></div>
+                </div>
+                
+                <div class="button-container">
+                    <button class="btn-primary" onclick="runOptimization()" id="optimizeBtn">
+                        <span>⚡</span> Optimize
+                    </button>
+                    <button class="btn-compare" onclick="compareModels()" id="compareBtn">
+                        <span>🔄</span> Compare
+                    </button>
+                    <button class="btn-secondary" onclick="resetForm()">
+                        <span>↺</span> Reset
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Results Panel -->
+            <div class="panel results-panel" id="resultsPanel">
+                <div class="panel-header">
+                    <h2><span class="panel-icon">📊</span> Optimization Results</h2>
+                </div>
+                
+                <div class="model-indicator" id="modelIndicator"></div>
+                
+                <div class="summary-card">
+                    <h3>Performance Summary</h3>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-label">Total Reward</div>
+                            <div class="summary-value" id="totalReward">0.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Avg Reward</div>
+                            <div class="summary-value" id="avgReward">0.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Leverage Δ</div>
+                            <div class="summary-value" id="leverageChange">0.00</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metrics-section">
+                    <div class="section-title">📈 Key Metrics</div>
+                    <div id="metricsContainer"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Comparison Panel -->
+        <div class="panel comparison-panel" id="comparisonPanel">
+            <div class="panel-header">
+                <h2><span class="panel-icon">🏆</span> Model Comparison: PPO vs SAC vs TD3</h2>
+            </div>
+            <div class="comparison-grid" id="comparisonGrid"></div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <div class="loading-text">Running optimization...</div>
+        </div>
+    </div>
+
+    <script>
+        let availableModels = [];
+        
+        async function loadExamples() {
+            try {
+                const response = await fetch('/api/example-companies');
+                const examples = await response.json();
+                
+                const container = document.getElementById('exampleButtons');
+                Object.entries(examples).forEach(([key, company]) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'btn-example';
+                    btn.textContent = company.name;
+                    btn.title = company.description;
+                    btn.onclick = () => loadExample(company);
+                    container.appendChild(btn);
+                });
+            } catch (e) {
+                console.error('Error loading examples:', e);
+            }
+        }
+        
+        function loadExample(company) {
+            document.getElementById('ticker').value = company.ticker;
+            document.getElementById('debt').value = company.debt;
+            document.getElementById('equity').value = company.equity;
+            document.getElementById('cash').value = company.cash;
+            company.cf_history.forEach((cf, i) => {
+                document.getElementById(`cf${i}`).value = cf;
+            });
+            showSuccess(`Loaded example: ${company.name}`);
+        }
+        
+        function resetForm() {
+            document.getElementById('ticker').value = 'MY_COMPANY';
+            document.getElementById('debt').value = '100';
+            document.getElementById('equity').value = '200';
+            document.getElementById('cash').value = '50';
+            for (let i = 0; i < 5; i++) {
+                document.getElementById(`cf${i}`).value = '0.10';
+            }
+            document.getElementById('resultsPanel').classList.remove('active');
+            document.getElementById('comparisonPanel').style.display = 'none';
+            hideMessages();
+        }
+        
+        async function checkModelStatus() {
+            try {
+                const response = await fetch('/api/model-status');
+                const data = await response.json();
+                
+                availableModels = data.available_models || [];
+                
+                const container = document.getElementById('modelStatus');
+                container.innerHTML = '';
+                
+                for (const [modelType, info] of Object.entries(data.models)) {
+                    const badge = document.createElement('div');
+                    badge.className = `model-badge ${info.loaded ? 'loaded' : 'not-loaded'}`;
+                    badge.innerHTML = `<span>${info.loaded ? '✓' : '✗'}</span> ${modelType.toUpperCase()}`;
+                    container.appendChild(badge);
+                }
+                
+                const hasModels = availableModels.length > 0;
+                document.getElementById('optimizeBtn').disabled = !hasModels;
+                document.getElementById('compareBtn').disabled = availableModels.length < 2;
+                
+                const modelSelect = document.getElementById('modelType');
+                modelSelect.innerHTML = '';
+                const LABELS = {
+                    'ppo': 'PPO - Proximal Policy Optimization',
+                    'sac': 'SAC - Soft Actor-Critic',
+                    'td3': 'TD3 - Twin Delayed DDPG'
+                };
+                availableModels.forEach(model => {
+                    const option = document.createElement('option');
+                    option.value = model;
+                    option.textContent = LABELS[model] || model.toUpperCase();
+                    modelSelect.appendChild(option);
+                });
+                
+            } catch (e) {
+                console.error('Error checking model status:', e);
+            }
+        }
+        
+        async function runOptimization() {
+            const data = collectFormData();
+            if (!data) return;
+            
+            showLoading(true);
+            hideMessages();
+            document.getElementById('comparisonPanel').style.display = 'none';
+            
+            try {
+                let endpoint = '/api/optimize';
+                let payload = data;
+                if (data.useRealtime) {
+                    endpoint = '/api/optimize-realtime';
+                    // Only need ticker, steps and model_type for realtime endpoint
+                    payload = { ticker: data.ticker, steps: data.steps, model_type: data.model_type };
+                }
+
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                showLoading(false);
+
+                if (!result.success) {
+                    showError(result.message);
+                    return;
+                }
+
+                // If realtime endpoint returns results for multiple models, pick the requested one
+                if (data.useRealtime && result.results) {
+                    // If model_type provided, result.results[model_type] is the run; otherwise pick first
+                    const modelKey = data.model_type || Object.keys(result.results)[0];
+                    const modelRes = result.results[modelKey];
+                    const summary = {
+                        model_type: modelKey,
+                        summary: {
+                            initial: {},
+                            final: modelRes && modelRes.length ? modelRes[modelRes.length-1] : {},
+                            improvement: { debt_change: 0, equity_change: 0, leverage_change: 0 },
+                            total_reward: modelRes ? modelRes.reduce((s, r) => s + (r.reward || 0), 0) : 0,
+                            avg_reward: modelRes && modelRes.length ? (modelRes.reduce((s, r) => s + (r.reward || 0), 0) / modelRes.length) : 0
+                        },
+                        results: modelRes
+                    };
+                    displaySingleModelResults(summary);
+                    showSuccess(`Realtime optimization completed for ${data.ticker} using ${modelKey.toUpperCase()}`);
+                } else {
+                    displaySingleModelResults(result);
+                    showSuccess(`Optimization completed for ${data.ticker} using ${data.model_type.toUpperCase()}`);
+                }
+
+            } catch (e) {
+                showLoading(false);
+                showError(`Error: ${e.message}`);
+            }
+        }
+        
+        function collectFormData() {
+            const ticker = document.getElementById('ticker').value;
+            const debt = parseFloat(document.getElementById('debt').value);
+            const equity = parseFloat(document.getElementById('equity').value);
+            const cash = parseFloat(document.getElementById('cash').value);
+            const steps = parseInt(document.getElementById('steps').value);
+            const modelType = document.getElementById('modelType').value;
+            const useRealtime = document.getElementById('useRealtime').checked;
+            
+            const cf_history = [];
+            for (let i = 0; i < 5; i++) {
+                cf_history.push(parseFloat(document.getElementById(`cf${i}`).value));
+            }
+            
+            if (debt <= 0 || equity <= 0 || cash < 0) {
+                showError('Invalid data: Debt and Equity must be positive');
+                return null;
+            }
+            
+            return { ticker, debt, equity, cash, cf_history, steps, model_type: modelType, useRealtime };
+        }
+        
+        function displaySingleModelResults(data) {
+            const panel = document.getElementById('resultsPanel');
+            panel.classList.add('active');
+            
+            const summary = data.summary;
+            
+            document.getElementById('modelIndicator').innerHTML = `
+                <span>🤖</span> Model: ${data.model_type.toUpperCase()}
+            `;
+            
+            document.getElementById('totalReward').textContent = summary.total_reward.toFixed(4);
+            document.getElementById('avgReward').textContent = summary.avg_reward.toFixed(4);
+            document.getElementById('leverageChange').textContent = summary.improvement.leverage_change.toFixed(4);
+            
+            const container = document.getElementById('metricsContainer');
+            container.innerHTML = `
+                <div class="metric-card">
+                    <span class="metric-label">Debt Change</span>
+                    <span class="metric-value ${summary.improvement.debt_change >= 0 ? 'positive' : 'negative'}">
+                        ${summary.improvement.debt_change >= 0 ? '+' : ''}${summary.improvement.debt_change.toFixed(2)}M
+                    </span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Equity Change</span>
+                    <span class="metric-value ${summary.improvement.equity_change >= 0 ? 'positive' : 'negative'}">
+                        ${summary.improvement.equity_change >= 0 ? '+' : ''}${summary.improvement.equity_change.toFixed(2)}M
+                    </span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Final WACC</span>
+                    <span class="metric-value">${(summary.final.wacc * 100).toFixed(2)}%</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Final Leverage</span>
+                    <span class="metric-value">${summary.final.leverage.toFixed(4)}</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Final Debt</span>
+                    <span class="metric-value">${summary.final.debt.toFixed(2)}M</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Final Equity</span>
+                    <span class="metric-value">${summary.final.equity.toFixed(2)}M</span>
+                </div>
+            `;
+            
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        async function compareModels() {
+            const data = collectFormData();
+            if (!data) return;
+            
+            showLoading(true);
+            hideMessages();
+            document.getElementById('resultsPanel').classList.remove('active');
+            
+            try {
+                let endpoint = '/api/compare-models';
+                let payload = data;
+                if (data.useRealtime) {
+                    endpoint = '/api/optimize-realtime';
+                    payload = { ticker: data.ticker, steps: data.steps };
+                }
+
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                showLoading(false);
+
+                if (!result.success) {
+                    showError(result.message);
+                    return;
+                }
+
+                // If realtime, result.results contains per-model runs
+                if (data.useRealtime && result.results) {
+                    // Build a comparison-like object
+                    const comparison = {};
+                    for (const [m, runs] of Object.entries(result.results)) {
+                        const total = runs ? runs.reduce((s, r) => s + (r.reward || 0), 0) : 0;
+                        const avg = runs && runs.length ? total / runs.length : 0;
+                        const final = runs && runs.length ? runs[runs.length-1] : {};
+                        comparison[m] = { total_reward: total, avg_reward: avg, final_leverage: final.leverage || 0, final_wacc: final.wacc || 0, final_debt: final.debt || 0, final_equity: final.equity || 0, results: runs };
+                    }
+                    displayComparison({ success: true, comparison: comparison, winner: null });
+                    showSuccess(`Realtime model comparison completed for ${data.ticker}`);
+                } else {
+                    displayComparison(result);
+                    showSuccess(`Model comparison completed for ${data.ticker}`);
+                }
+
+            } catch (e) {
+                showLoading(false);
+                showError(`Error: ${e.message}`);
+            }
+        }
+        
+        function displayComparison(data) {
+            const panel = document.getElementById('comparisonPanel');
+            panel.style.display = 'block';
+            
+            const grid = document.getElementById('comparisonGrid');
+            grid.innerHTML = '';
+            
+            const models = ['ppo', 'sac', 'td3'];
+            
+            models.forEach(modelType => {
+                if (data.comparison[modelType]) {
+                    const modelData = data.comparison[modelType];
+                    const isWinner = data.winner === modelType;
+                    
+                    const card = document.createElement('div');
+                    card.className = `model-result-card ${isWinner ? 'winner' : ''}`;
+                    card.innerHTML = `
+                        <div class="model-result-header">
+                            <div class="model-name">${modelType.toUpperCase()}</div>
+                            ${isWinner ? '<div class="winner-badge"><span>🏆</span> Winner</div>' : ''}
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-label">Total Reward</span>
+                            <span class="metric-value">${modelData.total_reward.toFixed(4)}</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-label">Average Reward</span>
+                            <span class="metric-value">${modelData.avg_reward.toFixed(4)}</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-label">Final Leverage</span>
+                            <span class="metric-value">${modelData.final_leverage.toFixed(4)}</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-label">Final WACC</span>
+                            <span class="metric-value">${(modelData.final_wacc * 100).toFixed(2)}%</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-label">Final Debt</span>
+                            <span class="metric-value">${modelData.final_debt.toFixed(2)}M</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-label">Final Equity</span>
+                            <span class="metric-value">${modelData.final_equity.toFixed(2)}M</span>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+            
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function showLoading(show) {
+            const overlay = document.getElementById('loadingOverlay');
+            if (show) {
+                overlay.classList.add('active');
+            } else {
+                overlay.classList.remove('active');
+            }
+            document.getElementById('optimizeBtn').disabled = show;
+            document.getElementById('compareBtn').disabled = show;
+        }
+        
+        function showError(message) {
+            const el = document.getElementById('errorMessage');
+            document.getElementById('errorText').textContent = message;
+            el.classList.add('active');
+            setTimeout(() => el.classList.remove('active'), 8000);
+        }
+        
+        function showSuccess(message) {
+            const el = document.getElementById('successMessage');
+            document.getElementById('successText').textContent = message;
+            el.classList.add('active');
+            setTimeout(() => el.classList.remove('active'), 5000);
+        }
+        
+        function hideMessages() {
+            document.getElementById('errorMessage').classList.remove('active');
+            document.getElementById('successMessage').classList.remove('active');
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            checkModelStatus();
+            loadExamples();
+        });
+    </script>
+</body>
+</html>

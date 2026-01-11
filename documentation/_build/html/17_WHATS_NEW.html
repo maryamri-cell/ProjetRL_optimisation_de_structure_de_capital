@@ -1,0 +1,1635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Was Created for You &mdash; Capital Structure RL Optimizer</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Index Complet du Projet" href="18_PROJECT_INDEX.html" />
+    <link rel="prev" title="Testing Your Model - Visual Guide" href="16_VISUAL_TESTING_GUIDE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Capital Structure RL Optimizer
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Guide Principal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01_QUICK_START.html">INDEX COMPLET - Améliorations Techniques Essentielles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#structure-du-projet-ameliore">Structure du Projet Amélioré</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#demarrage-immediat-5-minutes">DÉMARRAGE IMMÉDIAT (5 minutes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#verifier-l-installation">1 Vérifier l’installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#entrainer-rapidement-2-4-heures">2 Entraîner rapidement (2-4 heures)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#monitorer-l-entrainement">3 Monitorer l’entraînement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#evaluer-30-min">4 Évaluer (30 min)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#visualiser-5-min">5 Visualiser (5 min)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#documentations-cles">DOCUMENTATIONS CLÉS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#pour-debuter">Pour Débuter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#pour-reference">Pour Référence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#pour-resultats">Pour Résultats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#raccourcis-essentiels">RACCOURCIS ESSENTIELS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#test-rapide-30-min">Test Rapide (30 min)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#entrainement-complet-7-10-jours">Entraînement Complet (7-10 jours)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#monitoring-en-temps-reel">Monitoring en Temps Réel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#pipeline-complet">Pipeline Complet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#ameliorations-apportees">AMÉLIORATIONS APPORTÉES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#stabilisation-stabilization-mixin-py">Stabilisation (stabilization_mixin.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#hyperparametres-optimises-optimized-hyperparams-yaml">Hyperparamètres Optimisés (optimized_hyperparams.yaml)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#entrainement-production-train-stable-py">Entraînement Production (train_stable.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#evaluation-rigoureuse-statistical-evaluation-py">Évaluation Rigoureuse (statistical_evaluation.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#visualisations-essentielles-create-visualizations-py">Visualisations Essentielles (create_visualizations.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#monitoring-avec-w-b-train-with-monitoring-py">Monitoring avec W&amp;B (train_with_monitoring.py)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#resultats-avant-apres">RÉSULTATS AVANT/APRÈS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#avant">AVANT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#apres">APRÈS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#guide-complet-d-integration">GUIDE COMPLET D’INTÉGRATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#pour-commencer-maintenant">POUR COMMENCER MAINTENANT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#id1">PIPELINE COMPLET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#succes-criteres">SUCCÈS CRITÈRES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#stabilite">Stabilité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#reproductibilite">Reproductibilité</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#support-debugging">SUPPORT &amp; DEBUGGING</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#erreur-tests-echouent">Erreur: Tests échouent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#erreur-entrainement-ne-converge-pas">Erreur: Entraînement ne converge pas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#erreur-memory-overflow">Erreur: Memory overflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_QUICK_START.html#erreur-constraints-violations">Erreur: Constraints violations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#fichiers-a-lire">FICHIERS À LIRE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#prochaines-etapes">PROCHAINES ÉTAPES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#ressources">RESSOURCES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#fichiers-crees-resume">FICHIERS CRÉÉS RÉSUMÉ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_QUICK_START.html#checklist-finale">CHECKLIST FINALE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_INSTALLATION.html">Guide d’Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#installation-rapide">Installation Rapide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#cloner-le-repository-si-applicable">1. Cloner le repository (si applicable)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#creer-un-environnement-virtuel">2. Créer un environnement virtuel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="02_INSTALLATION.html#avec-venv-recommande">Avec venv (recommandé)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_INSTALLATION.html#avec-conda">Avec conda</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#installer-les-dependances">3. Installer les dépendances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#verifier-l-installation">4. Vérifier l’installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#installation-avancee">Installation Avancée</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#avec-gpu-nvidia-cuda-11-8">Avec GPU NVIDIA (CUDA 11.8+)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#setup-developpeur">Setup Développeur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#avec-docker">Avec Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#variables-d-environnement">Variables d’Environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#configuration-yaml">Configuration YAML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#verification-de-l-installation">Vérification de l’Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#test-minimal">Test minimal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#test-complet">Test complet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#test-gpu-optionnel">Test GPU (optionnel)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#depannage">Dépannage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#issue-1-modulenotfounderror">Issue 1: ModuleNotFoundError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#issue-2-cuda-not-available">Issue 2: CUDA not available</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#issue-3-out-of-memory">Issue 3: Out of Memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#issue-4-gymnasium-import-error">Issue 4: Gymnasium import error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#ressources-gpu">Ressources GPU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#configurations-testees">Configurations testées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#google-colab">Google Colab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_INSTALLATION.html#aws-gcp-azure">AWS/GCP/Azure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#mise-a-jour">Mise à Jour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#desinstallation">Désinstallation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#prochaines-etapes">Prochaines Étapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_INSTALLATION.html#support">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_PROJECT_SUMMARY.html">Résumé du Projet - Optimisation de Structure de Capital via Deep RL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#fichiers-et-repertoires-crees">Fichiers et Répertoires Créés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#racine-du-projet-7-fichiers">1. <strong>Racine du Projet</strong> (7 fichiers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#code-source-src-3-modules-11-fichiers">2. <strong>Code Source</strong> <code class="docutils literal notranslate"><span class="pre">src/</span></code> (3 modules + 11 fichiers)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="03_PROJECT_SUMMARY.html#src-utils-utilitaires"><code class="docutils literal notranslate"><span class="pre">src/utils/</span></code> - Utilitaires</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03_PROJECT_SUMMARY.html#src-models-modeles-economiques"><code class="docutils literal notranslate"><span class="pre">src/models/</span></code> - Modèles Économiques</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03_PROJECT_SUMMARY.html#src-environment-environnement-rl"><code class="docutils literal notranslate"><span class="pre">src/environment/</span></code> - Environnement RL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03_PROJECT_SUMMARY.html#src-agents-agents-rl-et-benchmarks"><code class="docutils literal notranslate"><span class="pre">src/agents/</span></code> - Agents RL et Benchmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#scripts-principaux-3-fichiers">3. <strong>Scripts Principaux</strong> (3 fichiers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#documentation-1-notebook-2-docs">4. <strong>Documentation</strong> (1 notebook + 2 docs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#repertoires-de-donnees-et-logs">5. <strong>Répertoires de Données et Logs</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#fonctionnalites-implementees">Fonctionnalités Implémentées</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#environnement-gymnasium">Environnement Gymnasium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#modele-economique">Modèle Économique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#algorithmes-rl">Algorithmes RL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#politiques-de-benchmark">Politiques de Benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#evaluation-et-monitoring">Évaluation et Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#parametres-environnement">Paramètres Environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#poids-de-recompense">Poids de Récompense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#hyperparametres-rl">Hyperparamètres RL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#utilisation">Utilisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#demonstration-rapide">Démonstration Rapide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#entrainement">Entraînement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#evaluation">Évaluation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#jupyter-notebook">Jupyter Notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#metriques-disponibles">Métriques Disponibles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#performance-financiere">Performance Financière</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#efficience">Efficience</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#robustesse">Robustesse</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#extensibilite">Extensibilité</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#ajouter-un-algorithme-rl">Ajouter un algorithme RL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#ajouter-une-politique-de-benchmark">Ajouter une politique de benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PROJECT_SUMMARY.html#ajouter-un-scenario">Ajouter un scénario</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#theories-financieres-implementees">Théories Financières Implémentées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#dependances-principales">Dépendances Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#criteres-de-succes">Critères de Succès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#flux-de-travail-typique">Flux de Travail Typique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#notes-importantes">Notes Importantes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#apprentissage">Apprentissage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_PROJECT_SUMMARY.html#support">Support</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Algorithmes &amp; Entraînement</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html">Capital Structure Optimizer - User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#launch-the-application">1. Launch the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#access-the-web-interface">2. Access the Web Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#features">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#input-section">Input Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#quick-load-examples">Quick Load Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#results-display">Results Display</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#summary-section">Summary Section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#detailed-timeline">Detailed Timeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#full-results-table">Full Results Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#understanding-the-results">Understanding the Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#what-does-optimization-mean">What Does “Optimization” Mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#interpreting-rewards">Interpreting Rewards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#key-metrics-explained">Key Metrics Explained</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#testing-different-scenarios">Testing Different Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#scenario-1-tech-startup">Scenario 1: Tech Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#scenario-2-distressed-company">Scenario 2: Distressed Company</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#scenario-3-custom-scenario">Scenario 3: Custom Scenario</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#api-endpoints">API Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#check-model-status">Check Model Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#run-optimization">Run Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#get-example-companies">Get Example Companies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#compare-policies">Compare Policies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#model-not-loaded">“Model Not Loaded”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#port-5000-already-in-use">“Port 5000 Already in Use”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#module-not-found">“Module Not Found”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#slow-performance">Slow Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#batch-testing-python-script">Batch Testing (Python Script)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#integration-with-your-systems">Integration with Your Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#model-details">Model Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#performance-metrics">Performance Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_OPTIMIZER_USER_GUIDE.html#support-documentation">Support &amp; Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html">Capital Structure Optimizer - Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#installation-setup">Installation &amp; Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#install-required-dependencies">1. Install Required Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#verify-model-file-exists">2. Verify Model File Exists</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#running-the-optimizer">Running the Optimizer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#option-a-web-interface-recommended">Option A: Web Interface (Recommended)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#windows">Windows:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#mac-linux">Mac/Linux:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#option-b-command-line-testing">Option B: Command-Line Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#web-interface-features">Web Interface Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#input-panel">Input Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#quick-load-examples">Quick Load Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#results-panel">Results Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#understanding-results">Understanding Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#key-metrics-explained">Key Metrics Explained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#what-good-results-look-like">What Good Results Look Like</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#testing-scenarios">Testing Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#scenario-1-can-the-model-fund-growth">Scenario 1: Can the model fund growth?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#scenario-2-can-the-model-handle-distress">Scenario 2: Can the model handle distress?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#scenario-3-is-the-model-stable">Scenario 3: Is the model stable?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#api-endpoints">API Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#get-api-model-status">GET <code class="docutils literal notranslate"><span class="pre">/api/model-status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#post-api-optimize">POST <code class="docutils literal notranslate"><span class="pre">/api/optimize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#get-api-example-companies">GET <code class="docutils literal notranslate"><span class="pre">/api/example-companies</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#model-not-found-error">“Model not found” Error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#port-5000-already-in-use">“Port 5000 already in use”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#importerror-no-module-named-flask">“ImportError: No module named ‘flask’”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#results-don-t-look-right">Results don’t look right</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#batch-testing">Batch Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#integration-with-corporate-systems">Integration with Corporate Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#performance-metrics">Performance Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#expected-model-performance">Expected Model Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#model-architecture">Model Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#reward-components">Reward Components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#training-alternative-algorithms-sac-td3">Training Alternative Algorithms: SAC &amp; TD3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#why-sac">Why SAC?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#training-sac">Training SAC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#quick-test-10k-steps">Quick Test (10k steps)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#full-training-recommended-500k-steps">Full Training (recommended: 500k steps)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#multi-company-training">Multi-Company Training</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#sac-hyperparameters">SAC Hyperparameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#performance-comparison">Performance Comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#generating-convergence-plots">Generating Convergence Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#using-sac-in-the-optimizer">Using SAC in the Optimizer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#training-tips-for-sac">Training Tips for SAC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#faq">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#support-documentation">Support &amp; Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_OPTIMIZER_QUICK_START.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html">SAC Training &amp; Testing Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#fastest-way-to-try-sac">Fastest Way to Try SAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#next-generate-convergence-visualization">Next: Generate Convergence Visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#complete-sac-training-workflows">Complete SAC Training Workflows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#option-1-single-company-fast-development">Option 1: Single Company (Fast Development)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#option-2-multi-company-training-production">Option 2: Multi-Company Training (Production)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#option-3-systematic-hyperparameter-tuning">Option 3: Systematic Hyperparameter Tuning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#hyperparameter-configuration">Hyperparameter Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#current-optimized-settings">Current Optimized Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#explanation-of-key-parameters">Explanation of Key Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#custom-hyperparameters">Custom Hyperparameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#testing-evaluation">Testing &amp; Evaluation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#convergence-analysis">1. Convergence Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#manual-model-testing">2. Manual Model Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#compare-sac-vs-ppo-vs-td3">3. Compare SAC vs PPO vs TD3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#understanding-results">Understanding Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#what-do-the-metrics-mean">What Do The Metrics Mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#debugging-poor-results">Debugging Poor Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#advanced-usage">Advanced Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#continuing-training-from-checkpoint">1. Continuing Training from Checkpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#evaluate-on-different-tickers">2. Evaluate on Different Tickers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#deploy-sac-in-web-optimizer">3. Deploy SAC in Web Optimizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#performance-benchmarks">Performance Benchmarks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#single-company-aapl-50k-steps">Single Company (AAPL, 50k steps)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#multi-company-5-companies-500k-steps">Multi-Company (5 companies, 500k steps)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#comparison-with-other-algorithms">Comparison with Other Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#sac-vs-ppo">SAC vs PPO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#sac-vs-td3">SAC vs TD3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#common-issues-solutions">Common Issues &amp; Solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#issue-attributeerror-nonetype-object-has-no-attribute-use-sde">Issue: “AttributeError: ‘NoneType’ object has no attribute ‘use_sde’”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#issue-training-very-slow-100-steps-sec">Issue: Training very slow (&lt; 100 steps/sec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#issue-reward-stays-at-0-0">Issue: Reward stays at 0.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#issue-model-not-found-error">Issue: “Model not found” error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_SAC_TRAINING_GUIDE.html#support">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html">PPO Training Results with Improvements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#training-configuration">Training Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#model-improvements-applied">Model Improvements Applied</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#training-results">Training Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#convergence-metrics">Convergence Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#key-observations">Key Observations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#comparison-previous-vs-improved">Comparison: Previous vs Improved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#next-steps-to-improve-further">Next Steps to Improve Further</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_TRAINING_REPORT_IMPROVED.html#files-generated">Files Generated</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Interface &amp; Évaluation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="05_INTERFACE_GUIDE.html">INTERFACE INTERACTIVE - Guide Complet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#qu-est-ce-que-c-est">Qu’est-ce que c’est?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#caracteristiques">Caractéristiques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#interface-web-moderne">1. <strong>Interface Web Moderne</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#graphiques-interactifs">2. <strong>Graphiques Interactifs</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#metriques-en-temps-reel">3. <strong>Métriques en Temps Réel</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#controles">4. <strong>Contrôles</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#comment-utiliser">Comment Utiliser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#etape-1-demarrer-le-serveur">Étape 1: Démarrer le Serveur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#etape-2-ouvrir-dans-le-navigateur">Étape 2: Ouvrir dans le Navigateur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#etape-3-interagir-avec-l-interface">Étape 3: Interagir avec l’Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_INTERFACE_GUIDE.html#a-choisir-une-politique">A. Choisir une Politique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_INTERFACE_GUIDE.html#b-configurer-les-parametres">B. Configurer les Paramètres</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_INTERFACE_GUIDE.html#c-lancer-la-simulation">C. Lancer la Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_INTERFACE_GUIDE.html#d-controler-la-simulation">D. Contrôler la Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#etape-4-analyser-les-resultats">Étape 4: Analyser les Résultats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_INTERFACE_GUIDE.html#interpretation-des-graphiques">Interprétation des Graphiques:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#cas-d-usage">Cas d’Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#cas-1-tester-une-politique">Cas 1: Tester une Politique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#cas-2-comparer-les-politiques">Cas 2: Comparer les Politiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#cas-3-analyser-les-decisions">Cas 3: Analyser les Décisions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#architecture-technique">Architecture Technique</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#backend-python-flask">Backend (Python/Flask)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#frontend-html-css-javascript">Frontend (HTML/CSS/JavaScript)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#communication">Communication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#design-responsive">Design Responsive</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#layout">Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#couleurs">Couleurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#performances">Performances</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#optimisations">Optimisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#capacites">Capacités</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#depannage">Dépannage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#l-interface-ne-charge-pas">L’interface ne charge pas?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#les-graphiques-ne-se-mettent-pas-a-jour">Les graphiques ne se mettent pas à jour?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#erreur-cors">Erreur CORS?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#exemples-de-resultats">Exemples de Résultats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#target-leverage-bon">Target Leverage (Bon)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#market-timing-excellent">Market Timing (Excellent)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#dynamic-trade-off-faible">Dynamic Trade-off (Faible)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#apprentissage">Apprentissage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#pour-comprendre-les-rl">Pour Comprendre les RL:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#pour-approfondir">Pour Approfondir:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#prochaines-etapes">Prochaines Étapes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#phase-1-exploration">Phase 1: Exploration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#phase-2-entrainement">Phase 2: Entraînement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_INTERFACE_GUIDE.html#phase-3-optimisation">Phase 3: Optimisation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#references">Références</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_INTERFACE_GUIDE.html#resume">Résumé</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html">SAC Integration &amp; Optimization - Completion Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#executive-summary">Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#what-was-accomplished">What Was Accomplished</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#sac-training-implementation">1.  SAC Training Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#hyperparameter-optimization">2.  Hyperparameter Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#convergence-analysis-visualization">3.  Convergence Analysis &amp; Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#prioritized-replay-buffer-framework">4.  Prioritized Replay Buffer (Framework)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#comprehensive-documentation">5.  Comprehensive Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#a-quick-start-guide-enhancement">A. Quick Start Guide Enhancement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#b-dedicated-sac-training-guide">B. Dedicated SAC Training Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#model-artifacts-generated">6.  Model Artifacts Generated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#key-results">Key Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#performance-metrics">Performance Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#stability-analysis">Stability Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#how-to-use">How to Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#quick-start-1-minute">Quick Start (1 minute)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#full-training-20-minutes">Full Training (20 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#generate-visualization-20-minutes">Generate Visualization (20 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#deploy-in-web-optimizer">Deploy in Web Optimizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#file-changes-summary">File Changes Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#new-files-created">New Files Created</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#files-modified">Files Modified</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#files-untouched-backward-compatible">Files Untouched (Backward Compatible)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#validation-checklist">Validation Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#next-steps-optional-enhancements">Next Steps (Optional Enhancements)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#short-term-1-2-hours">Short Term (1-2 hours)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#medium-term-1-2-days">Medium Term (1-2 days)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#long-term-1-2-weeks">Long Term (1-2 weeks)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08_SAC_COMPLETION_REPORT.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_TESTING_GUIDE.html">Testing Your Trained Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#quick-start-30-seconds">Quick Start (30 seconds)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#option-1-web-interface">Option 1: Web Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#option-2-command-line-test">Option 2: Command-Line Test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#what-you-ll-test">What You’ll Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#web-interface-features">Web Interface Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#input-form">Input Form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#quick-load-examples">Quick-Load Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#results-dashboard">Results Dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#key-results-to-look-for">Key Results to Look For</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#good-signs">Good Signs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#warning-signs">Warning Signs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#three-test-scenarios">Three Test Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#scenario-1-can-the-model-fund-growth">Scenario 1: Can the Model Fund Growth?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#scenario-2-can-the-model-handle-distress">Scenario 2: Can the Model Handle Distress?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#scenario-3-is-the-model-stable-consistent">Scenario 3: Is the Model Stable &amp; Consistent?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#understanding-the-metrics">Understanding the Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#leverage-d-d-e">Leverage (D/(D+E))</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#interest-coverage-ebit-interest">Interest Coverage (EBIT / Interest)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#wacc-weighted-average-cost-of-capital">WACC (Weighted Average Cost of Capital)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#reward">Reward</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#verification-checklist">Verification Checklist</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#model-loading">Model Loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#basic-functionality">Basic Functionality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#decision-quality">Decision Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#financial-sanity">Financial Sanity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#consistency">Consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#example-tech-startup-test">Example: Tech Startup Test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#input-data">Input Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#expected-results">Expected Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#success-criteria">Success Criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#next-steps-after-verification">Next Steps After Verification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#if-model-works">If Model Works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#if-model-needs-improvement">If Model Needs Improvement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#web-interface-won-t-load">Web Interface won’t load</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#model-shows-not-loaded">Model shows “not loaded”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#port-5000-already-in-use">Port 5000 already in use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10_TESTING_GUIDE.html#model-gives-bad-results">Model gives bad results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#model-performance-baseline">Model Performance Baseline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_TESTING_GUIDE.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_README_TESTING.html">Your Capital Structure Optimizer is Ready!</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#second-quick-start">30-Second Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#what-you-ve-got">What You’ve Got</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#what-to-test">What to Test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#test-1-can-ai-fund-growth-tech-startup">Test 1: Can AI Fund Growth? (Tech Startup)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#test-2-model-stability-mature-company">Test 2: Model Stability (Mature Company)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#test-3-risk-management-distressed-company">Test 3: Risk Management (Distressed Company)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#results-you-ll-see">Results You’ll See</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#summary-panel">Summary Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#quarterly-breakdown">Quarterly Breakdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#interpretation">Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#success-criteria">Success Criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#quick-commands">Quick Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#documentation-quick-links">Documentation Quick Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#if-something-goes-wrong">If Something Goes Wrong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#key-concepts">Key Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#what-is-the-model-learning">What is the Model Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#how-does-it-decide">How Does It Decide?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#what-s-the-reward-signal">What’s the Reward Signal?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#your-next-actions">Your Next Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#right-now-next-5-minutes">Right Now (Next 5 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#today-next-30-minutes">Today (Next 30 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#this-week">This Week</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#this-month">This Month</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#model-performance">Model Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#getting-help">Getting Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#documentation-in-order-of-usefulness">Documentation in Order of Usefulness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11_README_TESTING.html#quick-troubleshooting">Quick Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#validation">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11_README_TESTING.html#you-re-ready">You’re Ready!</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyse &amp; Performance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html">Reward Normalization Impact Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#quick-test-results-10k-timesteps">Quick Test Results (10k timesteps)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#before-vs-after-comparison">Before vs After Comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#root-cause-analysis">Root Cause Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#solution-fixed-clipping-not-running-normalization">Solution: Fixed Clipping (Not Running Normalization)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#results-summary">Results Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#key-learning">Key Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_REWARD_NORMALIZATION_ANALYSIS.html#implementation-status">Implementation Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html">Re-training PPO without Reward Normalization (50k steps)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html#objective">Objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html#test-configuration">Test Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html#hypothesis">Hypothesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html#key-test-points">Key Test Points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html#comparison-benchmarks">Comparison Benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_TEST_PLATEAU_ANALYSIS.html#status-running">Status: RUNNING</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html">Améliorations Techniques Essentielles - Résumé</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#fichiers-ajoutes">Fichiers Ajoutés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#scripts-d-entrainement">Scripts d’Entraînement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#scripts-d-evaluation">Scripts d’Évaluation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#infrastructure">Infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#verifier-que-tout-est-ok">1. Vérifier que tout est OK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#entrainer-les-modeles-multi-seed">2. Entraîner les modèles (multi-seed)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#evaluer">3. Évaluer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#visualiser">4. Visualiser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#ameliorations-cles">Améliorations Clés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#hard-constraints-stabilization-mixin-py">1. <strong>Hard Constraints</strong> (stabilization_mixin.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#reward-normalization-stabilization-mixin-py">2. <strong>Reward Normalization</strong> (stabilization_mixin.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#soft-termination-avec-recovery-stabilization-mixin-py">3. <strong>Soft Termination avec Recovery</strong> (stabilization_mixin.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#hyperparametres-optimises-optimized-hyperparams-yaml">4. <strong>Hyperparamètres Optimisés</strong> (optimized_hyperparams.yaml)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#multi-seed-training-train-stable-py">5. <strong>Multi-Seed Training</strong> (train_stable.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#evaluation-statistique-statistical-evaluation-py">6. <strong>Évaluation Statistique</strong> (statistical_evaluation.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#visualisations-essentielles-create-visualizations-py">7. <strong>Visualisations Essentielles</strong> (create_visualizations.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#monitoring-avec-w-b-train-with-monitoring-py">8. <strong>Monitoring avec W&amp;B</strong> (train_with_monitoring.py)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#resultats-attendus">Résultats Attendus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#avant-ameliorations">Avant Améliorations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#apres-ameliorations">Après Améliorations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#pipeline-complet">Pipeline Complet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#metriques-de-succes">Métriques de Succès</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#stabilite">Stabilité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#reproductibilite">Reproductibilité</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#structure-des-resultats">Structure des Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#monitoring">Monitoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#tensorboard">TensorBoard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#weights-biases">Weights &amp; Biases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#pour-commencer-maintenant">Pour Commencer Maintenant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#documentation-complete">Documentation Complète</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#ressources">Ressources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#validation">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="14_IMPROVEMENTS_SUMMARY.html#support">Support</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intégration &amp; Déploiement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html">CHECKLIST D’INTÉGRATION - Améliorations Techniques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-1-installation-et-verification">Phase 1: Installation et Vérification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#dependances">Dépendances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#fichiers-crees">Fichiers Créés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#tests-preliminaires">Tests Préliminaires</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-2-integration-du-mixin-de-stabilisation">Phase 2: Intégration du Mixin de Stabilisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#modification-de-capital-structure-env-py">Modification de capital_structure_env.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#tests-apres-integration">Tests après Intégration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-3-tests-de-stabilisation">Phase 3: Tests de Stabilisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#test-1-environnement-basique-30-min">Test 1: Environnement Basique (30 min)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#test-2-entrainement-court-2-4-heures">Test 2: Entraînement Court (2-4 heures)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#test-3-evaluation-court-30-min">Test 3: Évaluation Court (30 min)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-4-entrainement-complet">Phase 4: Entraînement Complet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#preparation">Préparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#lancement">Lancement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#verification-pendant-l-entrainement">Vérification Pendant l’Entraînement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-5-evaluation-complete">Phase 5: Évaluation Complète</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#commande-d-evaluation">Commande d’Évaluation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#verifier-les-resultats">Vérifier les Résultats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-6-visualisation">Phase 6: Visualisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#commande-de-visualisation">Commande de Visualisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#verifier-les-graphiques">Vérifier les Graphiques</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#phase-7-documentation-et-publication">Phase 7: Documentation et Publication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#rapport-final">Rapport Final</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#code-review">Code Review</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#debugging-si-erreurs">Debugging - Si Erreurs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#erreur-import-failed">Erreur: Import Failed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#erreur-constraint-violations-frequentes">Erreur: Constraint Violations Fréquentes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#erreur-out-of-memory">Erreur: Out of Memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#erreur-episodes-too-short">Erreur: Episodes Too Short</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#succes-criteres-final">Succès Critères Final</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#tous-les-criteres-doivent-etre-respectes">TOUS les critères doivent être respectés:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#tracking-du-progres">Tracking du Progrès</a></li>
+<li class="toctree-l2"><a class="reference internal" href="15_INTEGRATION_CHECKLIST.html#commandes-resume">COMMANDES RÉSUMÉ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html">Testing Your Model - Visual Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#what-you-can-do-now">What You Can Do Now</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#second-quick-start">30-Second Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#step-1-launch-web-interface">Step 1: Launch Web Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#step-2-open-browser">Step 2: Open Browser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#step-3-load-example">Step 3: Load Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#step-4-run-optimization">Step 4: Run Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#step-5-see-results">Step 5: See Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#web-interface-layout">Web Interface Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#what-each-test-case-shows">What Each Test Case Shows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#test-1-tech-startup">Test 1: Tech Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#test-2-mature-company">Test 2: Mature Company</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#test-3-distressed-company">Test 3: Distressed Company</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#how-to-interpret-results">How to Interpret Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#the-metrics-table">The Metrics Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#understanding-the-reward">Understanding the Reward</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#what-is-the-reward">What is the Reward?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#interpreting-reward-levels">Interpreting Reward Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#example-tech-startup">Example: Tech Startup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#warning-signs-model-not-working">Warning Signs (Model Not Working)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#if-you-see-these-something-is-wrong">If you see these, something is wrong:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#success-checklist">Success Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#next-steps">Next Steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#if-model-works">If Model Works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#if-model-needs-work">If Model Needs Work</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#troubleshooting-quick-links">Troubleshooting Quick Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#documentation-roadmap">Documentation Roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="16_VISUAL_TESTING_GUIDE.html#ready-to-go">Ready to Go!</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What Was Created for You</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#complete-inventory-of-new-updated-files">Complete Inventory of New &amp; Updated Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#new-files-created">🆕 NEW FILES CREATED</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#web-application-interface">1. <strong>Web Application &amp; Interface</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing-validation">2. <strong>Testing &amp; Validation</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launcher-scripts">3. <strong>Launcher Scripts</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documentation-comprehensive">4. <strong>Documentation (Comprehensive)</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#modified-files-critical-updates">MODIFIED FILES (Critical Updates)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src-environment-capital-structure-env-py"><strong>src/environment/capital_structure_env.py</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scripts-train-with-real-data-py"><strong>scripts/train_with_real_data.py</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-can-do-now">What You Can Do Now</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Testing &amp; Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-the-model">Understanding the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-deployment">Integration &amp; Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#by-the-numbers">By The Numbers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#files-created">Files Created</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lines-of-code">Lines of Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-pages">Documentation Pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-coverage">Feature Coverage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#second-start">30-Second Start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minute-start">5-Minute Start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minute-deep-dive">30-Minute Deep Dive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-quick-reference">Documentation Quick Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verification-checklist">Verification Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#learning-outcomes">Learning Outcomes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-model">About the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-implementation">About the Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-finance">About Finance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-dependencies">Setup &amp; Dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-you-need">What You Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-s-installed">What’s Installed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#included-in-project">Included in Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#success-criteria">Success Criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#support-help">Support &amp; Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#if-something-doesn-t-work">If Something Doesn’t Work</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#immediate-now">Immediate (Now)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#short-term-today">Short Term (Today)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#medium-term-this-week">Medium Term (This Week)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#long-term-this-month">Long Term (This Month)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#project-status">Project Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#congratulations">Congratulations!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="18_PROJECT_INDEX.html">Index Complet du Projet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#fichiers-crees-et-descriptions">Fichiers Créés et Descriptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#configuration-et-documentation-7-fichiers">1. Configuration et Documentation (7 fichiers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#code-source-principal-src-15-fichiers-2500-lignes">2. Code Source Principal <code class="docutils literal notranslate"><span class="pre">src/</span></code> (15 fichiers, ~2500 lignes)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="18_PROJECT_INDEX.html#module-utils-src-utils">Module Utils (<code class="docutils literal notranslate"><span class="pre">src/utils/</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="18_PROJECT_INDEX.html#module-models-src-models">Module Models (<code class="docutils literal notranslate"><span class="pre">src/models/</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="18_PROJECT_INDEX.html#module-environment-src-environment">Module Environment (<code class="docutils literal notranslate"><span class="pre">src/environment/</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="18_PROJECT_INDEX.html#module-agents-src-agents">Module Agents (<code class="docutils literal notranslate"><span class="pre">src/agents/</span></code>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#scripts-executables-3-fichiers">3. Scripts Exécutables (3 fichiers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#documentation-bonus-5-fichiers">4. Documentation Bonus (5 fichiers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#repertoires-de-projet-5-repertoires">5. Répertoires de Projet (5 répertoires)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#statistiques-du-projet">Statistiques du Projet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#codes">Codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#architecture-modulaire">Architecture Modulaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#technologies-utilisees">Technologies Utilisées</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#deep-learning-rl">Deep Learning &amp; RL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#data-finance">Data &amp; Finance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#visualisation">Visualisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#fonctionnalites-implementees">Fonctionnalités Implémentées</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#environnement">Environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#modele-economique">Modèle Économique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#algorithmes-rl">Algorithmes RL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#benchmark">Benchmark</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#commandes-essentielles">Commandes Essentielles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#theories-financieres">Théories Financières</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#modeles-implementes">Modèles Implémentés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#metriques-calculees">Métriques Calculées</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#concepts-rl-implementes">Concepts RL Implémentés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#mdp">MDP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#algorithmes">Algorithmes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#points-forts-du-projet">Points Forts du Projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#fichiers-cles">Fichiers Clés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#pour-commencer">Pour Commencer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#pour-developper">Pour Développer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#pour-analyser">Pour Analyser</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#resultats-attendus">Résultats Attendus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="18_PROJECT_INDEX.html#robustesse">Robustesse</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="18_PROJECT_INDEX.html#resume">Résumé</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html">INTERFACE INTERACTIVE - SYNTHÈSE COMPLÈTE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#ce-qui-a-ete-cree">Ce Qui a Été Créé</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#application-flask-app-py">1. <strong>Application Flask</strong> (<code class="docutils literal notranslate"><span class="pre">app.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#interface-html-css-javascript-templates-index-html">2. <strong>Interface HTML/CSS/JavaScript</strong> (<code class="docutils literal notranslate"><span class="pre">templates/index.html</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#scripts-de-demarrage">3. <strong>Scripts de Démarrage</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#documentation">4. <strong>Documentation</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#comment-demarrer">Comment Démarrer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#option-a-demarrage-rapide-recommande">Option A: Démarrage Rapide (Recommandé)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#option-b-demarrage-manuel">Option B: Démarrage Manuel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#option-c-depuis-powershell">Option C: Depuis PowerShell</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#interface-features">Interface Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#selecteur-de-politique">Sélecteur de Politique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#controles">Contrôles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#metriques">Métriques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#graphiques-6-total">Graphiques (6 Total)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#flux-d-utilisation">Flux d’Utilisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#etape-1-preparation">Étape 1: Préparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#etape-2-configuration">Étape 2: Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#etape-3-execution">Étape 3: Exécution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#etape-4-controle">Étape 4: Contrôle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#etape-5-analyse">Étape 5: Analyse</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#resultats-attendus">Résultats Attendus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#bonne-execution">Bonne Exécution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#performance-optimale">Performance Optimale</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#interpretation-des-resultats">Interprétation des Résultats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#market-timing-meilleur">Market Timing ( Meilleur)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#pecking-order-bon">Pecking Order (Bon)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#target-leverage-moyen">Target Leverage (Moyen)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#dynamic-trade-off-faible">Dynamic Trade-off (Faible)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#depannage">Dépannage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#l-interface-ne-charge-pas">L’interface ne charge pas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#les-graphiques-ne-s-affichent-pas">Les graphiques ne s’affichent pas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#simulation-ne-demarre-pas">Simulation ne démarre pas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#interface-gele">Interface gèle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#architecture">Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#communication">Communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#endpoints-api">Endpoints API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#types-de-donnees">Types de Données</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#personnalisation">Personnalisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#changer-les-couleurs">Changer les Couleurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#ajouter-des-graphiques">Ajouter des Graphiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#modifier-la-frequence-de-mise-a-jour">Modifier la Fréquence de Mise à Jour</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#fichiers-crees">Fichiers Créés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#checklist-finale">Checklist Finale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#prochaines-etapes">Prochaines Étapes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#utilisation-immediate">Utilisation Immédiate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#entrainement-d-agents">Entraînement d’Agents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#approfondir">Approfondir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="19_INTERACTIVE_SUMMARY.html#resume-final">Résumé Final</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Capital Structure RL Optimizer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What Was Created for You</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/17_WHATS_NEW.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="what-was-created-for-you">
+<h1>What Was Created for You<a class="headerlink" href="#what-was-created-for-you" title="Link to this heading"></a></h1>
+<section id="complete-inventory-of-new-updated-files">
+<h2>Complete Inventory of New &amp; Updated Files<a class="headerlink" href="#complete-inventory-of-new-updated-files" title="Link to this heading"></a></h2>
+<section id="new-files-created">
+<h3>🆕 NEW FILES CREATED<a class="headerlink" href="#new-files-created" title="Link to this heading"></a></h3>
+<section id="web-application-interface">
+<h4>1. <strong>Web Application &amp; Interface</strong><a class="headerlink" href="#web-application-interface" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">optimizer_app</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="mi">340</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Flask</span> <span class="n">web</span> <span class="n">server</span> <span class="k">with</span> <span class="mi">4</span> <span class="n">API</span> <span class="n">endpoints</span>
+   <span class="o">-</span> <span class="n">Model</span> <span class="n">loading</span> <span class="ow">and</span> <span class="n">optimization</span> <span class="n">logic</span>
+   <span class="o">-</span> <span class="n">Example</span> <span class="n">company</span> <span class="n">data</span>
+   <span class="o">-</span> <span class="n">Policy</span> <span class="n">comparison</span>
+   <span class="o">-</span> <span class="n">CORS</span><span class="o">-</span><span class="n">enabled</span> <span class="k">for</span> <span class="n">integration</span>
+
+ <span class="n">templates</span><span class="o">/</span><span class="n">optimizer</span><span class="o">.</span><span class="n">html</span> <span class="p">(</span><span class="mi">750</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Responsive</span> <span class="n">web</span> <span class="n">interface</span>
+   <span class="o">-</span> <span class="n">Real</span><span class="o">-</span><span class="n">time</span> <span class="n">results</span> <span class="n">visualization</span>
+   <span class="o">-</span> <span class="mi">4</span> <span class="n">quick</span><span class="o">-</span><span class="n">load</span> <span class="n">example</span> <span class="n">companies</span>
+   <span class="o">-</span> <span class="n">Detailed</span> <span class="n">metrics</span> <span class="o">&amp;</span> <span class="n">timeline</span> <span class="n">views</span>
+   <span class="o">-</span> <span class="n">Modern</span> <span class="n">CSS</span> <span class="k">with</span> <span class="n">gradients</span>
+   <span class="o">-</span> <span class="n">Mobile</span><span class="o">-</span><span class="n">friendly</span> <span class="n">design</span>
+</pre></div>
+</div>
+</section>
+<section id="testing-validation">
+<h4>2. <strong>Testing &amp; Validation</strong><a class="headerlink" href="#testing-validation" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">test_optimizer</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="mi">280</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Command</span><span class="o">-</span><span class="n">line</span> <span class="n">testing</span> <span class="n">script</span>
+   <span class="o">-</span> <span class="mi">3</span> <span class="n">test</span> <span class="n">cases</span> <span class="p">(</span><span class="n">Tech</span><span class="p">,</span> <span class="n">Mature</span><span class="p">,</span> <span class="n">Distressed</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Detailed</span> <span class="n">quarterly</span> <span class="n">breakdown</span>
+   <span class="o">-</span> <span class="n">Verifies</span> <span class="n">model</span> <span class="n">functionality</span>
+   <span class="o">-</span> <span class="n">No</span> <span class="n">web</span> <span class="n">interface</span> <span class="n">needed</span>
+</pre></div>
+</div>
+</section>
+<section id="launcher-scripts">
+<h4>3. <strong>Launcher Scripts</strong><a class="headerlink" href="#launcher-scripts" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">run_optimizer</span><span class="o">.</span><span class="n">bat</span> <span class="p">(</span><span class="n">Windows</span> <span class="n">launcher</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Checks</span> <span class="n">Python</span> <span class="n">installation</span>
+   <span class="o">-</span> <span class="n">Verifies</span> <span class="n">dependencies</span>
+   <span class="o">-</span> <span class="n">Confirms</span> <span class="n">model</span> <span class="n">exists</span>
+   <span class="o">-</span> <span class="n">Starts</span> <span class="n">Flask</span> <span class="n">server</span>
+   <span class="o">-</span> <span class="n">User</span><span class="o">-</span><span class="n">friendly</span> <span class="n">error</span> <span class="n">messages</span>
+
+ <span class="n">run_optimizer</span><span class="o">.</span><span class="n">sh</span> <span class="p">(</span><span class="n">Linux</span><span class="o">/</span><span class="n">Mac</span> <span class="n">launcher</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Same</span> <span class="n">functionality</span> <span class="k">as</span> <span class="o">.</span><span class="n">bat</span>
+   <span class="o">-</span> <span class="n">Unix</span><span class="o">-</span><span class="n">style</span> <span class="n">shell</span> <span class="n">script</span>
+</pre></div>
+</div>
+</section>
+<section id="documentation-comprehensive">
+<h4>4. <strong>Documentation (Comprehensive)</strong><a class="headerlink" href="#documentation-comprehensive" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">TESTING_GUIDE</span><span class="o">.</span><span class="n">md</span> <span class="p">(</span><span class="mi">400</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Complete</span> <span class="n">testing</span> <span class="n">procedures</span>
+   <span class="o">-</span> <span class="mi">3</span> <span class="n">detailed</span> <span class="n">test</span> <span class="n">scenarios</span>
+   <span class="o">-</span> <span class="n">Success</span><span class="o">/</span><span class="n">warning</span> <span class="n">checklist</span>
+   <span class="o">-</span> <span class="n">Troubleshooting</span> <span class="n">guide</span>
+   <span class="o">-</span> <span class="n">Metric</span> <span class="n">interpretations</span>
+   <span class="o">-</span> <span class="n">Best</span> <span class="n">practices</span>
+
+ <span class="n">OPTIMIZER_QUICK_START</span><span class="o">.</span><span class="n">md</span> <span class="p">(</span><span class="mi">500</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Feature</span> <span class="n">overview</span>
+   <span class="o">-</span> <span class="n">Setup</span> <span class="n">instructions</span>
+   <span class="o">-</span> <span class="n">Testing</span> <span class="n">scenarios</span>
+   <span class="o">-</span> <span class="n">API</span> <span class="n">documentation</span>
+   <span class="o">-</span> <span class="n">Advanced</span> <span class="n">usage</span> <span class="n">examples</span>
+   <span class="o">-</span> <span class="n">FAQ</span> <span class="o">&amp;</span> <span class="n">troubleshooting</span>
+
+ <span class="n">VISUAL_TESTING_GUIDE</span><span class="o">.</span><span class="n">md</span> <span class="p">(</span><span class="mi">300</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Visual</span> <span class="n">diagrams</span> <span class="o">&amp;</span> <span class="n">layouts</span>
+   <span class="o">-</span> <span class="n">Visual</span> <span class="n">success</span> <span class="n">checklist</span>
+   <span class="o">-</span> <span class="n">Expected</span> <span class="n">vs</span> <span class="n">bad</span> <span class="n">results</span>
+   <span class="o">-</span> <span class="n">Easy</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">scan</span> <span class="nb">format</span>
+   <span class="o">-</span> <span class="n">Perfect</span> <span class="k">for</span> <span class="n">quick</span> <span class="n">reference</span>
+
+ <span class="n">COMPLETE_SUMMARY</span><span class="o">.</span><span class="n">md</span> <span class="p">(</span><span class="mi">500</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Full</span> <span class="n">project</span> <span class="n">overview</span>
+   <span class="o">-</span> <span class="n">Technical</span> <span class="n">foundation</span>
+   <span class="o">-</span> <span class="n">Architecture</span> <span class="n">diagram</span>
+   <span class="o">-</span> <span class="n">Results</span> <span class="o">&amp;</span> <span class="n">metrics</span>
+   <span class="o">-</span> <span class="n">Deployment</span> <span class="n">instructions</span>
+   <span class="o">-</span> <span class="n">Validation</span> <span class="n">checklist</span>
+
+ <span class="n">DOCUMENTATION_INDEX</span><span class="o">.</span><span class="n">md</span> <span class="p">(</span><span class="mi">300</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Master</span> <span class="n">navigation</span> <span class="n">guide</span>
+   <span class="o">-</span> <span class="n">Document</span> <span class="n">purposes</span> <span class="n">table</span>
+   <span class="o">-</span> <span class="n">Step</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">step</span> <span class="n">tutorials</span>
+   <span class="o">-</span> <span class="n">Quick</span> <span class="n">help</span> <span class="n">Q</span><span class="o">&amp;</span><span class="n">A</span>
+   <span class="o">-</span> <span class="n">Learning</span> <span class="n">paths</span>
+
+ <span class="n">QUICK_COMMANDS</span><span class="o">.</span><span class="n">sh</span> <span class="p">(</span><span class="mi">100</span> <span class="n">lines</span><span class="p">)</span>
+   <span class="o">-</span> <span class="n">Copy</span><span class="o">-</span><span class="n">paste</span> <span class="n">command</span> <span class="n">reference</span>
+   <span class="o">-</span> <span class="n">All</span> <span class="n">major</span> <span class="n">commands</span> <span class="n">listed</span>
+   <span class="o">-</span> <span class="n">Expected</span> <span class="n">outputs</span>
+   <span class="o">-</span> <span class="n">Troubleshooting</span> <span class="n">tips</span>
+
+ <span class="n">UPDATED</span> <span class="n">COMPLETE_SUMMARY</span><span class="o">.</span><span class="n">md</span>
+   <span class="o">-</span> <span class="n">Comprehensive</span> <span class="n">project</span> <span class="n">overview</span>
+   <span class="o">-</span> <span class="n">Status</span> <span class="n">assessment</span>
+   <span class="o">-</span> <span class="n">Performance</span> <span class="n">metrics</span>
+   <span class="o">-</span> <span class="n">Deployment</span> <span class="n">guide</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modified-files-critical-updates">
+<h3>MODIFIED FILES (Critical Updates)<a class="headerlink" href="#modified-files-critical-updates" title="Link to this heading"></a></h3>
+<section id="src-environment-capital-structure-env-py">
+<h4><strong>src/environment/capital_structure_env.py</strong><a class="headerlink" href="#src-environment-capital-structure-env-py" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Changes</span> <span class="n">Made</span><span class="p">:</span>
+ <span class="n">Added</span> <span class="n">disable_reward_normalization</span> <span class="n">parameter</span>
+ <span class="n">Updated</span> <span class="n">_normalize_reward</span><span class="p">()</span> <span class="n">method</span>
+ <span class="n">Replaced</span> <span class="n">running</span> <span class="n">normalization</span> <span class="k">with</span> <span class="n">fixed</span> <span class="n">clipping</span>
+ <span class="n">Maintained</span> <span class="n">backward</span> <span class="n">compatibility</span>
+
+<span class="n">Impact</span><span class="p">:</span>
+ <span class="n">Fixed</span> <span class="mi">1000</span><span class="n">x</span> <span class="n">reward</span> <span class="n">signal</span> <span class="n">suppression</span>
+ <span class="n">Enables</span> <span class="n">proper</span> <span class="n">learning</span> <span class="n">convergence</span>
+ <span class="n">Critical</span> <span class="k">for</span> <span class="n">model</span> <span class="n">training</span>
+</pre></div>
+</div>
+</section>
+<section id="scripts-train-with-real-data-py">
+<h4><strong>scripts/train_with_real_data.py</strong><a class="headerlink" href="#scripts-train-with-real-data-py" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Changes</span> <span class="n">Made</span><span class="p">:</span>
+ <span class="n">Added</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">reward</span><span class="o">-</span><span class="n">normalization</span> <span class="n">CLI</span> <span class="n">argument</span>
+ <span class="n">Modified</span> <span class="n">make_env</span><span class="p">()</span> <span class="n">to</span> <span class="n">accept</span> <span class="n">flag</span>
+ <span class="n">Updated</span> <span class="n">train_single_company</span><span class="p">()</span> <span class="n">function</span>
+ <span class="n">Updated</span> <span class="n">train_multi_company</span><span class="p">()</span> <span class="n">function</span>
+ <span class="n">Threaded</span> <span class="n">flag</span> <span class="n">through</span> <span class="n">entire</span> <span class="n">pipeline</span>
+
+<span class="n">Impact</span><span class="p">:</span>
+ <span class="n">Allows</span> <span class="n">controlled</span> <span class="n">reward</span> <span class="n">normalization</span>
+ <span class="n">Enables</span> <span class="n">reproducible</span> <span class="n">training</span>
+ <span class="n">Supports</span> <span class="n">both</span> <span class="n">settings</span> <span class="k">for</span> <span class="n">comparison</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-you-can-do-now">
+<h2>What You Can Do Now<a class="headerlink" href="#what-you-can-do-now" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Testing &amp; Validation<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Web Interface Testing</strong></p>
+<ul class="simple">
+<li><p>Run: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">optimizer_app.py</span></code></p></li>
+<li><p>Access: http://localhost:5000</p></li>
+<li><p>Test: 4 example companies + custom data</p></li>
+<li><p>Features: Real-time results, detailed metrics</p></li>
+</ul>
+</li>
+<li><p><strong>Command-Line Testing</strong></p>
+<ul class="simple">
+<li><p>Run: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test_optimizer.py</span></code></p></li>
+<li><p>Get: 3 test scenarios with detailed output</p></li>
+<li><p>No web browser needed</p></li>
+<li><p>Fast &amp; detailed results</p></li>
+</ul>
+</li>
+<li><p><strong>Custom Company Testing</strong></p>
+<ul class="simple">
+<li><p>Enter your company’s data</p></li>
+<li><p>See AI recommendations</p></li>
+<li><p>Validate decision quality</p></li>
+<li><p>Export results</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="understanding-the-model">
+<h3>Understanding the Model<a class="headerlink" href="#understanding-the-model" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Verification</strong></p>
+<ul class="simple">
+<li><p>Confirm model is trained correctly</p></li>
+<li><p>Check decision patterns</p></li>
+<li><p>Validate financial safety</p></li>
+<li><p>Ensure consistency</p></li>
+</ul>
+</li>
+<li><p><strong>Learning</strong></p>
+<ul class="simple">
+<li><p>Understand what AI learned</p></li>
+<li><p>See decision patterns</p></li>
+<li><p>Observe financial constraints</p></li>
+<li><p>Learn about capital structure</p></li>
+</ul>
+</li>
+<li><p><strong>Documentation</strong></p>
+<ul class="simple">
+<li><p>Complete guides provided</p></li>
+<li><p>Step-by-step tutorials</p></li>
+<li><p>Troubleshooting help</p></li>
+<li><p>API documentation</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="integration-deployment">
+<h3>Integration &amp; Deployment<a class="headerlink" href="#integration-deployment" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>API Integration</strong></p>
+<ul class="simple">
+<li><p>Use Flask endpoints</p></li>
+<li><p>POST optimization requests</p></li>
+<li><p>Batch process companies</p></li>
+<li><p>Integrate with systems</p></li>
+</ul>
+</li>
+<li><p><strong>Production Deployment</strong></p>
+<ul class="simple">
+<li><p>Docker support ready</p></li>
+<li><p>Gunicorn compatible</p></li>
+<li><p>CORS enabled</p></li>
+<li><p>Scalable architecture</p></li>
+</ul>
+</li>
+<li><p><strong>Advanced Usage</strong></p>
+<ul class="simple">
+<li><p>Batch testing</p></li>
+<li><p>Custom scoring</p></li>
+<li><p>Policy comparison</p></li>
+<li><p>Model variations</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="by-the-numbers">
+<h2>By The Numbers<a class="headerlink" href="#by-the-numbers" title="Link to this heading"></a></h2>
+<section id="files-created">
+<h3>Files Created<a class="headerlink" href="#files-created" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>New Python files</strong>: 2 (optimizer_app.py, test_optimizer.py)</p></li>
+<li><p><strong>New HTML/Frontend</strong>: 1 (optimizer.html)</p></li>
+<li><p><strong>New Shell scripts</strong>: 2 (run_optimizer.bat, run_optimizer.sh)</p></li>
+<li><p><strong>New documentation</strong>: 6 comprehensive guides + 1 index</p></li>
+</ul>
+</section>
+<section id="lines-of-code">
+<h3>Lines of Code<a class="headerlink" href="#lines-of-code" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Backend (Flask)</strong>: 340+ lines</p></li>
+<li><p><strong>Frontend (HTML/JS)</strong>: 750+ lines</p></li>
+<li><p><strong>Testing script</strong>: 280+ lines</p></li>
+<li><p><strong>Total new code</strong>: 1370+ lines</p></li>
+</ul>
+</section>
+<section id="documentation-pages">
+<h3>Documentation Pages<a class="headerlink" href="#documentation-pages" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Testing Guide</strong>: 400+ lines</p></li>
+<li><p><strong>Quick Start Guide</strong>: 500+ lines</p></li>
+<li><p><strong>Visual Guide</strong>: 300+ lines</p></li>
+<li><p><strong>Complete Summary</strong>: 500+ lines</p></li>
+<li><p><strong>Index &amp; Navigation</strong>: 300+ lines</p></li>
+<li><p><strong>Total documentation</strong>: 2000+ lines</p></li>
+</ul>
+</section>
+<section id="feature-coverage">
+<h3>Feature Coverage<a class="headerlink" href="#feature-coverage" title="Link to this heading"></a></h3>
+<p>Web interface with 4 example companies
+Real-time optimization API
+Detailed metrics &amp; visualization
+Command-line testing
+Complete documentation
+Troubleshooting guides
+Deployment instructions
+Integration examples</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<section id="second-start">
+<h3>30-Second Start<a class="headerlink" href="#second-start" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>optimizer_app.py
+<span class="c1"># Then open http://localhost:5000</span>
+<span class="c1"># Click &quot;Tech Startup&quot;  &quot;Optimize&quot;</span>
+<span class="c1"># See results!</span>
+</pre></div>
+</div>
+</section>
+<section id="minute-start">
+<h3>5-Minute Start<a class="headerlink" href="#minute-start" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Read visual guide</span>
+cat<span class="w"> </span>VISUAL_TESTING_GUIDE.md<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-50
+
+<span class="c1"># 2. Start server</span>
+python<span class="w"> </span>optimizer_app.py
+
+<span class="c1"># 3. Test in browser</span>
+<span class="c1"># Open: http://localhost:5000</span>
+<span class="c1"># Try all 4 examples</span>
+</pre></div>
+</div>
+</section>
+<section id="minute-deep-dive">
+<h3>30-Minute Deep Dive<a class="headerlink" href="#minute-deep-dive" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Read testing guide</span>
+cat<span class="w"> </span>TESTING_GUIDE.md
+
+<span class="c1"># 2. Try command-line test</span>
+python<span class="w"> </span>test_optimizer.py
+
+<span class="c1"># 3. Try web interface</span>
+python<span class="w"> </span>optimizer_app.py
+
+<span class="c1"># 4. Enter custom company data</span>
+<span class="c1"># Test your own company</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="documentation-quick-reference">
+<h2>Documentation Quick Reference<a class="headerlink" href="#documentation-quick-reference" title="Link to this heading"></a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Read Time</th>
+<th>Start Here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VISUAL_TESTING_GUIDE.md</td>
+<td>Visual reference</td>
+<td>10 min</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>TESTING_GUIDE.md</td>
+<td>Complete testing</td>
+<td>20 min</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>OPTIMIZER_QUICK_START.md</td>
+<td>Features &amp; API</td>
+<td>15 min</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>COMPLETE_SUMMARY.md</td>
+<td>Full overview</td>
+<td>30 min</td>
+<td>Maybe</td>
+</tr>
+<tr>
+<td>DOCUMENTATION_INDEX.md</td>
+<td>Navigation</td>
+<td>5 min</td>
+<td>Maybe</td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="verification-checklist">
+<h2>Verification Checklist<a class="headerlink" href="#verification-checklist" title="Link to this heading"></a></h2>
+<p>After reading these files, you should be able to:</p>
+<ul class="simple">
+<li><p>[ ] <strong>Run the web interface</strong> without errors</p></li>
+<li><p>[ ] <strong>Load example companies</strong> successfully</p></li>
+<li><p>[ ] <strong>Understand the results</strong> displayed</p></li>
+<li><p>[ ] <strong>Know what good results look like</strong> (leverage, rewards, coverage)</p></li>
+<li><p>[ ] <strong>Identify problems</strong> if model isn’t working</p></li>
+<li><p>[ ] <strong>Fix common issues</strong> (port in use, missing dependencies, etc.)</p></li>
+<li><p>[ ] <strong>Use the API</strong> for custom integration</p></li>
+<li><p>[ ] <strong>Retrain the model</strong> if needed</p></li>
+<li><p>[ ] <strong>Deploy to production</strong> when ready</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="learning-outcomes">
+<h2>Learning Outcomes<a class="headerlink" href="#learning-outcomes" title="Link to this heading"></a></h2>
+<p>After using these tools and reading the documentation, you’ll understand:</p>
+<section id="about-the-model">
+<h3>About the Model<a class="headerlink" href="#about-the-model" title="Link to this heading"></a></h3>
+<p>How capital structure optimization works with RL
+What decisions the AI makes and why
+How to evaluate model quality
+When to trust and when to verify</p>
+</section>
+<section id="about-the-implementation">
+<h3>About the Implementation<a class="headerlink" href="#about-the-implementation" title="Link to this heading"></a></h3>
+<p>How the Flask app works
+How the web interface functions
+How to integrate with your systems
+How to extend and customize</p>
+</section>
+<section id="about-finance">
+<h3>About Finance<a class="headerlink" href="#about-finance" title="Link to this heading"></a></h3>
+<p>Leverage (debt-to-capital ratio)
+Interest coverage (ability to pay debt)
+WACC (weighted average cost of capital)
+Capital structure optimization basics</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="setup-dependencies">
+<h2>Setup &amp; Dependencies<a class="headerlink" href="#setup-dependencies" title="Link to this heading"></a></h2>
+<section id="what-you-need">
+<h3>What You Need<a class="headerlink" href="#what-you-need" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Python 3.9+ (tested on 3.11)</p></li>
+<li><p>pip package manager</p></li>
+<li><p>500MB disk space for model</p></li>
+<li><p>8GB RAM (4GB minimum)</p></li>
+</ul>
+</section>
+<section id="what-s-installed">
+<h3>What’s Installed<a class="headerlink" href="#what-s-installed" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>flask<span class="w"> </span>flask-cors<span class="w"> </span>stable-baselines3<span class="w"> </span>gymnasium<span class="w"> </span>numpy
+</pre></div>
+</div>
+</section>
+<section id="included-in-project">
+<h3>Included in Project<a class="headerlink" href="#included-in-project" title="Link to this heading"></a></h3>
+<p>Trained PPO model (168 KB)
+20 S&amp;P 500 companies’ data
+220 augmented training scenarios
+All configuration files
+All documentation</p>
+<p><strong>Everything is ready to go!</strong></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="success-criteria">
+<h2>Success Criteria<a class="headerlink" href="#success-criteria" title="Link to this heading"></a></h2>
+<p>Your setup is successful when:</p>
+<ol class="arabic simple">
+<li><p>Web interface loads at http://localhost:5000</p></li>
+<li><p>Model shows “ Model Loaded” status</p></li>
+<li><p>Example companies load correctly</p></li>
+<li><p>“Tech Startup” shows increasing leverage</p></li>
+<li><p>“Mature Company” shows stable leverage</p></li>
+<li><p>“Distressed” shows decreasing leverage</p></li>
+<li><p>All rewards are positive (0.1-0.9 range)</p></li>
+<li><p>Results are reproducible (run twice, get same results)</p></li>
+<li><p>No crashes or timeouts</p></li>
+<li><p>Interest coverage stays &gt; 1.0x always</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="support-help">
+<h2>Support &amp; Help<a class="headerlink" href="#support-help" title="Link to this heading"></a></h2>
+<section id="if-something-doesn-t-work">
+<h3>If Something Doesn’t Work<a class="headerlink" href="#if-something-doesn-t-work" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Check the documentation first</strong></p>
+<ul class="simple">
+<li><p>Start: VISUAL_TESTING_GUIDE.md</p></li>
+<li><p>Then: OPTIMIZER_QUICK_START.md (Troubleshooting section)</p></li>
+<li><p>Finally: TESTING_GUIDE.md (Troubleshooting section)</p></li>
+</ul>
+</li>
+<li><p><strong>Common Issues &amp; Fixes</strong></p>
+<ul class="simple">
+<li><p>“Model not found”  Train: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">scripts/train_with_real_data.py</span> <span class="pre">--mode</span> <span class="pre">multi</span> <span class="pre">--timesteps</span> <span class="pre">50000</span> <span class="pre">--no-reward-normalization</span></code></p></li>
+<li><p>“Port 5000 in use”  Kill other Flask: <code class="docutils literal notranslate"><span class="pre">lsof</span> <span class="pre">-i</span> <span class="pre">:5000;</span> <span class="pre">kill</span> <span class="pre">-9</span> <span class="pre">&lt;PID&gt;</span></code></p></li>
+<li><p>“ImportError”  Install: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+<li><p>“Negative rewards”  Check if training used <code class="docutils literal notranslate"><span class="pre">--no-reward-normalization</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Verify Model</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from stable_baselines3 import PPO; m = PPO.load(&#39;models/real_data/multi_company/PPO_seed44/final_model&#39;); print(&#39; Model OK&#39;)&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<section id="immediate-now">
+<h3>Immediate (Now)<a class="headerlink" href="#immediate-now" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Run: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">optimizer_app.py</span></code></p></li>
+<li><p>Open: http://localhost:5000</p></li>
+<li><p>Click: “Tech Startup”</p></li>
+<li><p>Click: “Optimize”</p></li>
+<li><p>See: Results!</p></li>
+</ol>
+</section>
+<section id="short-term-today">
+<h3>Short Term (Today)<a class="headerlink" href="#short-term-today" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Read: <a class="reference internal" href="#VISUAL_TESTING_GUIDE.md"><span class="xref myst">VISUAL_TESTING_GUIDE.md</span></a></p></li>
+<li><p>Try: All 4 example companies</p></li>
+<li><p>Read: <a class="reference internal" href="#TESTING_GUIDE.md"><span class="xref myst">TESTING_GUIDE.md</span></a></p></li>
+<li><p>Test: Custom company data</p></li>
+</ol>
+</section>
+<section id="medium-term-this-week">
+<h3>Medium Term (This Week)<a class="headerlink" href="#medium-term-this-week" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Read: <a class="reference internal" href="#OPTIMIZER_QUICK_START.md"><span class="xref myst">OPTIMIZER_QUICK_START.md</span></a></p></li>
+<li><p>Study: API endpoints</p></li>
+<li><p>Try: Integration with your system</p></li>
+<li><p>Read: <a class="reference internal" href="#COMPLETE_SUMMARY.md"><span class="xref myst">COMPLETE_SUMMARY.md</span></a></p></li>
+</ol>
+</section>
+<section id="long-term-this-month">
+<h3>Long Term (This Month)<a class="headerlink" href="#long-term-this-month" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Customize: Modify for your needs</p></li>
+<li><p>Deploy: Production setup</p></li>
+<li><p>Monitor: Performance tracking</p></li>
+<li><p>Extend: Add more features</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="project-status">
+<h2>Project Status<a class="headerlink" href="#project-status" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Component              Status        Ready?
+
+Model Training          Complete    YES
+Model Testing           Complete    YES
+Web Interface           Complete    YES
+API Endpoints           Complete    YES
+Documentation           Complete    YES
+Launcher Scripts        Complete    YES
+Example Companies       Complete    YES
+Error Handling          Complete    YES
+CORS Support            Complete    YES
+Mobile Responsive       Complete    YES
+
+Overall Status:  PRODUCTION READY
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="congratulations">
+<h2>Congratulations!<a class="headerlink" href="#congratulations" title="Link to this heading"></a></h2>
+<p>You now have a complete, production-ready <strong>Capital Structure Optimizer</strong> with:</p>
+<p>Trained PPO model (0.873 reward, no plateau)
+Web interface with 4 examples
+Command-line testing tool
+Complete API documentation
+Comprehensive user guides
+Troubleshooting help
+Deployment instructions
+Integration examples</p>
+<p><strong>Everything is ready. Time to test it!</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>optimizer_app.py
+<span class="c1"># Then visit http://localhost:5000</span>
+</pre></div>
+</div>
+<p><strong>Happy optimizing!</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="16_VISUAL_TESTING_GUIDE.html" class="btn btn-neutral float-left" title="Testing Your Model - Visual Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="18_PROJECT_INDEX.html" class="btn btn-neutral float-right" title="Index Complet du Projet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RL Finance Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
